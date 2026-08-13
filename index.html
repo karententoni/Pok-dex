@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="pokedex-container">
+        <div class="pokedex-top">
+            <div class="light-big blue"></div>
+            <div class="light-small red"></div>
+            <div class="light-small yellow"></div>
+            <div class="light-small green"></div>
+        </div>
+
+        <div class="pokedex-screen-container">
+            <div class="pokedex-screen">
+                <img src="" alt="Pokemon" class="pokemon-image" id="pokemon-image">
+                
+                <div class="pokemon-data">
+                    <span class="pokemon-number" id="pokemon-number"></span>
+                    <h1 class="pokemon-name" id="pokemon-name">Carregando...</h1>
+                </div>
+
+                <div class="pokemon-types" id="pokemon-types">
+                    </div>
+            </div>
+        </div>
+
+        <form class="search-form" id="search-form">
+            <input 
+                type="search" 
+                class="search-input" 
+                id="search-input" 
+                placeholder="Nome ou Número" 
+                required
+            >
+        </form>
+
+        <div class="pokedex-buttons">
+            <button class="btn btn-prev" id="btn-prev">&lt; Voltar</button>
+            <button class="btn btn-next" id="btn-next">Avançar &gt;</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

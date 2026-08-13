@@ -1,0 +1,201 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #2a2a2a 0%, #111111 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estrutura da Pokédex */
+.pokedex-container {
+    background-color: #dc0a2d;
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 12px 0 #a5001d, 0 20px 30px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Luzes do Topo */
+.pokedex-top {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.light-big {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.light-big.blue { background-color: #00bfff; }
+
+.light-small {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+
+.light-small.red { background-color: #ff0000; }
+.light-small.yellow { background-color: #f1c40f; }
+.light-small.green { background-color: #2ecc71; }
+
+/* Tela do Pokémon */
+.pokedex-screen-container {
+    background-color: #dedede;
+    border-radius: 15px;
+    padding: 15px 15px 25px 15px;
+    border-bottom: 4px solid #b0b0b0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokedex-screen {
+    background-color: #232323;
+    border-radius: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
+    color: white;
+}
+
+.pokemon-image {
+    max-height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.pokemon-data {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pokemon-number {
+    color: #aaa;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.pokemon-name {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* Tipos de Pokémon */
+.pokemon-types {
+    display: flex;
+    gap: 8px;
+}
+
+.type-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Cores dos Tipos */
+.type-normal { background-color: #A8A77A; }
+.type-fire { background-color: #EE8130; }
+.type-water { background-color: #6390F0; }
+.type-electric { background-color: #F7D02C; }
+.type-grass { background-color: #7AC74C; }
+.type-ice { background-color: #96D9D6; }
+.type-fighting { background-color: #C22E28; }
+.type-poison { background-color: #A33EA1; }
+.type-ground { background-color: #E2BF65; }
+.type-flying { background-color: #A98FF3; }
+.type-psychic { background-color: #F95587; }
+.type-bug { background-color: #A6B91A; }
+.type-rock { background-color: #B6A136; }
+.type-ghost { background-color: #735797; }
+.type-dragon { background-color: #6F35FC; }
+.type-dark { background-color: #705746; }
+.type-steel { background-color: #B7B7CE; }
+.type-fairy { background-color: #D685AD; }
+
+/* Barra de Busca */
+.search-form {
+    margin: 15px 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 3px solid #232323;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Botões de Controle */
+.pokedex-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #222;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.btn-prev { background-color: #4e4e4e; }
+.btn-next { background-color: #222; }
+
+/* Responsividade para telas menores */
+@media (max-width: 420px) {
+    body {
+        padding: 0;
+    }
+    .pokedex-container {
+        height: 100vh;
+        max-width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
